@@ -39,12 +39,14 @@ the state of the `singleLine` property.
     </style>
     <paper-input
       no-label-float
+      placeholder="[[placeholder]]"
       hidden$="[[!singleLine]]"
       value="{{text}}"
       on-keydown="_checkForEnter">
     </paper-input>
     <paper-textarea
       no-label-float
+      placeholder="[[placeholder]]"
       hidden$="[[singleLine]]"
       value="{{text}}"
       on-keydown="_checkForEnter">
@@ -74,6 +76,13 @@ the state of the `singleLine` property.
           type: String,
           notify: true
         },
+
+        /**
+         * Placeholder text for the input field.
+         */
+        placeholder: {
+          type: String
+        }
 
         /**
          * The paper-icon-button's `icon` or a URL to use as the paper-icon-button's `src`.
